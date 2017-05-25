@@ -842,19 +842,19 @@ namespace Fungus
             {
                 if (textUI != null)
                 {
-                    textUI.text = value;
+					textUI.text = BidirectionalSupport.Fix (value);
                 }
                 else if (inputField != null)
                 {
-                    inputField.text = value;
+					inputField.text =  BidirectionalSupport.Fix (value);
                 }
                 else if (textMesh != null)
                 {
-                    textMesh.text = value;
+					textMesh.text =  BidirectionalSupport.Fix (value);
                 }
                 else if (textProperty != null)
                 {
-                    textProperty.SetValue(textComponent, value, null);
+					textProperty.SetValue(textComponent, BidirectionalSupport.Fix (value), null);
                 }
             }
         }
